@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
           <Navbar />
         </div>
         {/* Page content here */}
-        {children}
+        <div className="w-full max-w-[1500px] mx-auto px-8">{children}</div>
       </div>
       <div className="drawer-side">
         <label

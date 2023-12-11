@@ -1,8 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
-//import logo from "../assets/images/logo.png";
+import logo from "../assets/images/developer1.png";
 const Navbar = () => {
   return (
-    <div className="w-full max-w-[1600px] mx-auto px-6">
+    <div className="w-full max-w-[1500px] mx-auto ">
       <div className="flex-none lg:hidden">
         <label
           htmlFor="my-drawer-3"
@@ -24,17 +24,19 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-      <div className="flex-1 px-2 mx-2">
-        <Link to={"/"}>
-          <h3 className="text-5xl font-bold text-lime-400 p-2">mahdiHasan.</h3>
+      <div className="flex-1  px-2 mx-3 ">
+        <Link to={"/"} className="flex gap-1 justify-start items-center">
+        <img className="w-14 h-14" src={logo} alt="" />
+          <h3 className="text-4xl font-bold text-lime-300 py-3"><span className="text-[#00d8ba]">mahdi</span>Hasan.</h3>
         </Link>
-        {/*<img className="w-52 h-20" src={logo} alt="" />*/}
       </div>
       <div className="flex-none hidden lg:block ">
-        <div className="flex gap-4 text-lime-400">
+        <div className="flex gap-4 text-lime-300 text-xl font-bold">
           <NavLink
             className={({ isActive }) =>
-              isActive ? "btn btn-sm btn-primary" : "btn btn-ghost btn-sm"
+              isActive
+                ? "btn btn-sm btn-primary text-xl font-bold"
+                : " text-lg font-bold btn btn-ghost btn-sm"
             }
             to={"/"}
           >
@@ -42,7 +44,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive ? "btn btn-sm btn-primary" : "btn btn-ghost btn-sm"
+              isActive
+                ? "btn btn-sm btn-primary text-lg font-bold"
+                : "text-lg font-bold btn btn-ghost btn-sm"
             }
             to={"/about"}
           >
@@ -50,7 +54,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive ? "btn btn-sm btn-primary" : "btn btn-ghost btn-sm"
+              isActive
+                ? "btn btn-sm text-lg font-bold btn-primary"
+                : "text-lg font-bold btn btn-ghost btn-sm"
             }
             to={"/contact"}
           >
