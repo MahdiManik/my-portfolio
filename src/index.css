@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
+.banner {
+  padding: 0px 30px 30px 180px;
+  align-items: align-center;
+  background-image: url(./assets/images/developer.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}

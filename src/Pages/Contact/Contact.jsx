@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import hello from "../../assets/images/contact1.png";
 import { FaAddressBook, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -42,18 +41,23 @@ const Contact = () => {
     }
   };
   return (
-    <div className="my-20 bg-yellow-50 py-20">
-      <h1 className="mx-auto text-center border-red-100 text-6xl font-bold text-black border-b-4 w-96 pb-2">
+    <div
+      className="my-20 bg-yellow-50 py-20"
+      data-aos="fade-up"
+      data-aos-delay="50"
+      data-aos-duration="1500"
+    >
+      <h1 className="mx-auto text-center border-red-100 text-5xl font-bold text-black border-b-4 w-96 pb-2">
         CONTACT
       </h1>
       <p className="text-center text-lg font-bold text-lime-600">
         Lets Talk About Ideas
       </p>
       <img className="w-96 mx-auto mt-4" src={hello} alt="" />
-      <section className=" p-32 md:flex lg:flex justify-between ">
+      <section className="px-20 py-32 md:flex lg:flex justify-between gap-8">
         <div className="">
           <div className="flex flex-col justify-center items-start gap-20">
-            <h1 className="text-5xl font-bold text-black">Lets Connect</h1>
+            <h1 className="text-4xl font-bold text-black">Lets Connect</h1>
             <div>
               <h3 className="text-3xl font-bold text-black">Mahdi Hasan</h3>
               <h5 className="text-xl font-semibold pt-3 text-black">
@@ -65,35 +69,35 @@ const Contact = () => {
               </p>
               <div className="mt-10">
                 <div className="flex justify-start items-center gap-4 mb-8">
-                  <span className="text-5xl text-orange-500">
+                  <span className="text-4xl text-orange-500">
                     <FaAddressBook />
                   </span>
                   <div>
-                    <h4 className="text-2xl font-semibold">Address</h4>
+                    <h4 className="text-xl font-semibold">Address</h4>
                     <p className="text-lg">Dhaka, Bangladesh</p>
                   </div>
                 </div>
                 <div className="flex justify-start items-center gap-4 mb-8">
-                  <span className="text-5xl text-orange-500">
+                  <span className="text-4xl text-orange-500">
                     <MdEmail />
                   </span>
                   <div>
-                    <h4 className="text-2xl font-semibold">Email</h4>
+                    <h4 className="text-xl font-semibold">Email</h4>
                     <p className="text-lg">codermahdihasan@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex justify-start items-center gap-4 mb-8">
-                  <span className="text-5xl text-orange-500">
+                  <span className="text-4xl text-orange-500">
                     <FaPhone />
                   </span>
                   <div>
-                    <h4 className="text-2xl font-semibold">Phone</h4>
+                    <h4 className="text-xl font-semibold">Phone</h4>
                     <p className="text-lg">+8801890385489</p>
                   </div>
                 </div>
               </div>
             </div>
-            <p className="text-xl text-black">
+            <p className="text-lg text-black">
               Please fill out the form on this section to <br /> contact with me
               or call between 9:00 A.M <br /> and 8.00 P.M ET, Monday through
               Friday.
@@ -102,7 +106,7 @@ const Contact = () => {
         </div>
         <div className="">
           <div className="flex flex-col justify-center items-start gap-20">
-            <h1 className="text-5xl font-bold text-black">Let’s Message me</h1>
+            <h1 className="text-4xl font-bold text-black">Let’s Message me</h1>
             <form className="flex flex-col" onSubmit={handleSubmit}>
               <div className="label">
                 <span className="label-text text-lg font-bold">Your name</span>
@@ -115,7 +119,7 @@ const Contact = () => {
                 name="name"
                 placeholder="Your Name"
                 id="name"
-                className="input input-bordered border-3 border-black md:w-[600px] lg:w-[600px] mb-3 blok"
+                className="input input-bordered border-3 border-black md:w-[480px] lg:w-[480px] mb-3 blok"
               />
               <div className="label">
                 <span className="label-text text-lg font-bold">Your Email</span>
@@ -128,7 +132,7 @@ const Contact = () => {
                 name="email"
                 placeholder="Your email"
                 id="email"
-                className="input input-bordered md:w-[600px] lg:w-[600px] border-3 border-black blok mb-3"
+                className="input input-bordered md:w-[480px] lg:w-[480px] border-3 border-black blok mb-3"
               />
               <div className="label">
                 <span className="label-text text-lg font-bold">Subject</span>
@@ -141,7 +145,7 @@ const Contact = () => {
                 name="subject"
                 placeholder="Your subject"
                 id="subject"
-                className="input input-bordered md:w-[600px] lg:w-[600px] border-3 border-black blok mb-3"
+                className="input input-bordered md:w-[480px] lg:w-[480px] border-3 border-black blok mb-3"
               />
               <div className="label">
                 <span className="label-text text-lg font-bold">
@@ -151,7 +155,7 @@ const Contact = () => {
               <textarea
                 onChange={handleChange}
                 value={formData.message}
-                className="textarea border-3 border-black md:w-[600px] lg:w-[600px] blok"
+                className="textarea border-3 border-black md:w-[480px] lg:w-[480px] blok"
                 name="message"
                 placeholder="Please Your Message"
                 id="message"

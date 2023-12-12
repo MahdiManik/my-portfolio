@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/images/developer1.png";
 const Navbar = () => {
   return (
-    <div className="w-full max-w-[1500px] mx-auto ">
+    <div className="w-full max-w-[1200px] mx-auto font-poppins">
       <div className="flex-none lg:hidden">
         <label
           htmlFor="my-drawer-3"
@@ -24,19 +24,21 @@ const Navbar = () => {
           </svg>
         </label>
       </div>
-      <div className="flex-1  px-2 mx-3 ">
+      <div className="flex-1 px-2 mx-3 ">
         <Link to={"/"} className="flex gap-1 justify-start items-center">
-        <img className="w-14 h-14" src={logo} alt="" />
-          <h3 className="text-4xl font-bold text-lime-300 py-3"><span className="text-[#00d8ba]">mahdi</span>Hasan.</h3>
+          <img className="w-14 h-14" src={logo} alt="" />
+          <h3 className="text-3xl font-bold text-white py-3">
+            <span className="text-[#00d8ba]">mahdi</span>Hasan.
+          </h3>
         </Link>
       </div>
       <div className="flex-none hidden lg:block ">
-        <div className="flex gap-4 text-lime-300 text-xl font-bold">
+        <div className="flex gap-8 text-white  ">
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "btn btn-sm btn-primary text-xl font-bold"
-                : " text-lg font-bold btn btn-ghost btn-sm"
+                ? "btn bg-orange-400  px-4 rounded-lg btn-sm"
+                : " btn btn-ghost hover:bg-orange-400 px-4 rounded-lg btn-sm"
             }
             to={"/"}
           >
@@ -45,22 +47,32 @@ const Navbar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "btn btn-sm btn-primary text-lg font-bold"
-                : "text-lg font-bold btn btn-ghost btn-sm"
+                ? "btn bg-orange-400  px-4 rounded-lg btn-sm font-bold"
+                : "px-4 rounded-lg btn-sm font-bold btn btn-ghost hover:bg-orange-400"
             }
             to={"/about"}
           >
-            About
+            About Me
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "btn btn-sm text-lg font-bold btn-primary"
-                : "text-lg font-bold btn btn-ghost btn-sm"
+                ? "btn bg-orange-400  px-4 rounded-lg btn-sm font-bold"
+                : "px-4 rounded-lg btn-sm font-bold btn btn-ghost hover:bg-orange-400"
+            }
+            to={"/blog"}
+          >
+            Blogs
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive
+                ? "btn bg-orange-400 px-4 rounded-lg btn-sm font-bold "
+                : "px-4 rounded-lg btn-sm font-bold btn btn-ghost hover:bg-orange-400"
             }
             to={"/contact"}
           >
-            Contact
+            Talk to me
           </NavLink>
         </div>
       </div>
