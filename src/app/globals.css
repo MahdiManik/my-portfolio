@@ -1,0 +1,77 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply text-gray-800 bg-white;
+}
+
+/* Component styles */
+@layer components {
+  .section-container {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md font-medium text-sm transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-md font-medium text-sm transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply bg-transparent hover:bg-white/10 text-white px-6 py-3 rounded-md font-medium text-sm border border-white/20 transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg;
+  }
+
+  .page-header {
+    @apply bg-primary text-white pt-28 pb-16 relative overflow-hidden;
+  }
+
+  .page-header-pattern {
+    @apply absolute inset-0 opacity-10 pointer-events-none bg-[url('/images/pattern-dots.png')] bg-repeat;
+  }
+
+  .page-title {
+    @apply text-4xl sm:text-5xl font-bold mb-4;
+  }
+
+  .page-description {
+    @apply text-xl text-gray-200 max-w-2xl;
+  }
+}
+
+/* Added for grid pattern background */
+.bg-grid-primary {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, theme('colors.primary.DEFAULT / 0.1') 1px, transparent 1px),
+    linear-gradient(to bottom, theme('colors.primary.DEFAULT / 0.1') 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.primary.DEFAULT / 0.7');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.primary.DEFAULT');
+}
